@@ -1,0 +1,264 @@
+/* GLOBAL STYLES */
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom,#050816, #0b1120);
+    color: white;
+}
+
+/* HEADER */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(5,8,22,0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+section{
+    padding: 120px 10%;
+}
+
+.logo{
+    font-size: 1.8rem;
+    font-weight:700;
+    color: #8b5cf6;
+    letter-spacing: 1px;
+    
+}
+
+.nav{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav a{
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.nav a:hover{
+    color: #8b5cf6;
+}
+
+.nav a:hover::after{
+    width: 100%;
+}
+
+.nav a::after{
+    content: "";
+    position:absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    background: #8b5cf6;
+    transition: 0.3s;
+}
+
+/* HERO SECTION */
+.hero{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 10% 0;    
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+/* RESPONSIVE DESIGN */
+@media(max-width:900px){
+    .hero-wrapper{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-card{
+        width: 100%
+    }
+}
+
+.hero-content{
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    animation: fadeUp 1s ease;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform: translateY(40px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* HERO CARD */
+
+.hero-card{
+    width: 320px;
+    padding: 30px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    position: relative;
+    z-index: 2;
+}
+
+.hero-card h3{
+    margin-bottom: 20px;
+}
+
+.tech-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tech-list span{
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #cbd5e1;
+}
+.tagline{
+    color: #8b5cf6;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.hero h1{
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.subtitle{
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.btn{
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 999px;
+    background: #8b5cf6;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 0 35px rgba(139, 92, 246, 0.5);
+}
+
+/* GLOW EFFECTS */
+.glow{
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+}
+
+.glow1{
+    width: 300px;
+    height: 300px;
+    background: #8b5cf6;
+    top: -100px;
+    left:-100px;
+    opacity:0.3;
+}
+
+.glow2{
+    width: 250px;
+    height: 250px;
+    background: #22d3ee;
+    bottom: -100px;
+    right: -100px;
+    opacity: 0.2;
+}
+
+/* ABOUT SECTION */
+.about{
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text{
+    flex:1;
+}
+
+.section-tag{
+    color: #8b5cf6;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.about-text h2{
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.about-text p{
+    color: #94a3b8;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-card{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-box{
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+}
+
+@media(max-width:900px){
+    .about{
+        flex-direction: column;
+    }
+}
