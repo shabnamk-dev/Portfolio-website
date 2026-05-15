@@ -92,35 +92,6 @@ section{
     gap: 50px;
 }
 
-/* RESPONSIVE DESIGN */
-@media(max-width:900px){
-
-    .nav{
-        display:none;
-    }
-
-    .hero h1{
-        font-size: 3rem;
-    }
-
-    .hero{
-        padding-top:150px;
-    }
-
-    .hero-wrapper{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .hero-card{
-        width: 100%
-    }
-
-    .logo{
-        font-size: 1.4rem;
-    }
-}
-
 .hero-content{
     position: relative;
     z-index: 2;
@@ -274,8 +245,37 @@ section{
     backdrop-filter: blur(10px);
 }
 
+/* RESPONSIVE DESIGN */
 @media(max-width:900px){
+
+    .nav{
+        display:none;
+    }
+
+    .hero h1{
+        font-size: 3rem;
+    }
+
+    .hero{
+        padding-top:150px;
+    }
+
+    .hero-wrapper{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-card{
+        width: 100%
+    }
+
+    .logo{
+        font-size: 1.4rem;
+    }
+
     .about{
         flex-direction: column;
     }
+}
+
 }
